@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Geist } from 'next/font/google';
 import './globals.css';
-import { AppProvider } from '@/lib/context';
 
 const geist = Geist({ subsets: ['latin'] });
 
@@ -14,7 +13,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ko">
       <body className={`${geist.className} min-h-screen bg-background antialiased`}>
-        <AppProvider>{children}</AppProvider>
+        {children}
       </body>
     </html>
   );
